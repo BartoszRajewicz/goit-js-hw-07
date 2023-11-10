@@ -2,9 +2,6 @@ import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 const galleryContainer = document.querySelector("ul.gallery");
-galleryContainer.addEventListener("click", (event) => {
-  event.preventDefault();
-});
 const images = galleryItems.map((item) => {
   return `<div class="gallery__item">
             <a class="gallery__link" href="${item.original}">
@@ -17,4 +14,9 @@ const images = galleryItems.map((item) => {
              </a>
         </div>`;
 });
+
 galleryContainer.insertAdjacentHTML("beforeend", images.join(""));
+
+galleryItems.addEventListener("click", (event) => {
+  event.preventDefault();
+});
