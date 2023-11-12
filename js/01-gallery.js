@@ -33,4 +33,3 @@ galleryContainer.addEventListener("click", (event) => {
     openLightbox(source, alt);
   }
 });
-
